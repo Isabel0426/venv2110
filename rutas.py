@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 @app.route('/')
-@app.route('/forms',methods=('GET','POST'))
+@app.route('/',methods=('GET','POST'))
 def forms():
     form = FormInicio()
     if(form.validate_on_submit()):
